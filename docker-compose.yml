@@ -1,38 +1,3 @@
-# version: '3'
-# services:
-#   app:
-#     container_name: url_api
-#     build: .
-#     ports: 
-#       - :3000
-#     restart: on-failure
-#     volumes:
-#       - api:/usr/src/app/
-#     depends_on:
-#       - postgres          
-
-
-
-#   postgres:
-#     image: postgres:latest
-#     container_name: full_db_postgres
-#     environment:
-#       - POSTGRES_USER=${DB_USER}  
-#       - POSTGRES_DB=${DB_NAME}
-#       - DATABASE_HOST=${DB_HOST} 
-#     ports:
-#       - '5432:5432'
-#     volumes:
-#       - database_postgres:/var/lib/postgresql/data
-
-#     env_file:
-#       - config/.env
-
-
-# volumes:
-#   api:
-#   database_postgres: 
-
 version: "2"
 
 services:
