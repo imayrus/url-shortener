@@ -25,12 +25,12 @@ func DatabaseSetup() {
 
 	host := os.Getenv("DB_HOST")
 	user := os.Getenv("DB_USER")
-	//password := os.Getenv("DB_PASS")
+	password := os.Getenv("DB_PASS")
 	dbname := os.Getenv("DB_NAME")
 	port := os.Getenv("DB_PORT")
 	dbdriver := os.Getenv("DB_DRIVER")
 
-	dbinfo := fmt.Sprintf("host=%s port=%s user=%s  dbname=%s sslmode=disable", host, port, user,  dbname)
+	dbinfo := fmt.Sprintf("host=%s port=%s user=%s  dbname=%s password=%s sslmode=disable", host, port, user,  dbname, password)
 
 	db, err = gorm.Open(dbdriver, dbinfo)
 	if err != nil {
